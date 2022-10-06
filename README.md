@@ -49,6 +49,16 @@ To debug the closest method above the cursor use you can run:
 
 It is better to define a mapping to invoke this command. See the mapping section bellow.
 
+### Attaching to a Remote Debuggee / Server
+You can attach to a remote debug server using `:lua require('dap').continue()` and selecting the pre-configured debug
+option of `Attach to Remote Server`.
+
+The default port is set to `9999`. Use the following config to override it:
+- `:lua require('dap-go').set_remote_debug_port(<port>)`
+
+The default remote host is "127.0.0.1". Set the following config to override it:
+- `:lua require('dap-go').set_remote_debug_host('hostname')`
+
 ### Debugging with command-line arguments
 
 1. Select the option `Debug (Arguments)`
